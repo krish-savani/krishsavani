@@ -37,6 +37,11 @@
     .text{
         font-size: 35px;
     }
+    .title {
+        transform: rotate(0deg);
+        top: 74px;
+        right: -30px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -62,15 +67,12 @@
     .my-image {
         width: 200px;
     }
-        
     .iam{
         font-size: 26px;
         padding: 0 6px 0 4px;
     }
-    .text{
+    .type-text{
         font-size: 26px;
-        font-family: sans-serif;
-        color: rgb(255, 30, 0);
     }
     .down-arrow {
         width: 60px;
