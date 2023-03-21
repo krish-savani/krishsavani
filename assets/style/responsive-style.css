@@ -1,0 +1,125 @@
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1200px){
+    .list-item {
+        font-size: 18px;
+    }
+    .contact-info-content h2{
+        margin: 24px 0;
+    }
+}
+
+@media only screen and (max-width: 991.5px) {
+    .hero {
+        min-height: 700px;
+    }
+    .navbar-div {
+        background: rgb(255 255 255);
+        background-image: url(../image/nav-background1.avif);
+        background-blend-mode: hard-light;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .list-item {
+        text-align: center;
+        width: 50%;
+        background: rgba(0,0,0,0.20);
+    }
+    .header-scrolled .list-item{
+        margin: 12px 2px;
+    }
+    .list-item span::before {
+        left: -100%;
+    }
+    .iam{
+        font-size: 35px;
+    }
+    .text{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        min-height: 650px;
+    }
+    .name-text {
+        font-size: 4rem;
+        margin: 24px 0 0 0;
+    }
+    .iam{
+        padding: 0 6px 0 6px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .hero {
+        min-height: 480px;
+    }
+    .name-text {
+        font-size: 3rem;
+    }
+    .my-image {
+        width: 200px;
+    }
+        
+    .iam{
+        font-size: 26px;
+        padding: 0 6px 0 4px;
+    }
+    .text{
+        font-size: 26px;
+        font-family: sans-serif;
+        color: rgb(255, 30, 0);
+    }
+    .down-arrow {
+        width: 60px;
+        height: 60px;
+    }
+    .down-arrow i{
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 992px){
+	.timeline-content {
+	    padding-left: 64px;
+	}
+}
+
+@media (min-width: 992px) {
+    .info-before:before {
+        content: "";
+        position: absolute;
+        top: 2.875rem;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
+        border-radius: 50%;
+        z-index: 0;
+        left: 50%;
+        width: 96%;
+        transform: translateX(-50%);
+        height: 65%;
+        border-radius: 1rem;
+        height: 13rem;
+    }
+    .info-before::after {
+        content: "";
+        position: absolute;
+        top: 3.4375rem;
+        right: 0;
+        bottom: 0;
+        box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
+        border-radius: 50%;
+        z-index: 0;
+        left: 50%;
+        width: 94%;
+        transform: translateX(-50%);
+        height: 59%;
+        border-radius: 1rem;
+        height: 11.76rem;
+    }
+   
+}
