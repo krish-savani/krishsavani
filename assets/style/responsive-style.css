@@ -37,7 +37,7 @@
     .text{
         font-size: 35px;
     }
-    .title {
+    #skills .title {
         transform: rotate(0deg);
         top: 74px;
         right: -30px;
