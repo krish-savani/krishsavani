@@ -90,6 +90,18 @@
   background-color: var(--bs-dark);
 }
 
+.w-30px {
+  width: 30px;
+}
+
+.w-35px {
+  width: 35px;
+}
+
+.w-60px {
+  width: 60px;
+}
+
 /* header css */
 
 .header {
@@ -699,15 +711,6 @@ hr.divider:after {
   height: 4rem;
 }
 
-#contact .contact-ui-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 svg.svg-icon {
   fill: var(--bs-primary);
   stroke: var(--bs-primary);
@@ -755,7 +758,7 @@ input:-webkit-autofill:active {
   position: relative;
 }
 
-@keyframes rotation {
+/* @keyframes rotation {
   from{
     transform:rotate(0deg);
   }
@@ -767,8 +770,7 @@ input:-webkit-autofill:active {
 
 .rotation  {
 	animation: rotation 2s infinite ease-in;
-
-}
+} */
 
 /* @keyframes icon-animation {
   0% {
@@ -788,10 +790,13 @@ input:-webkit-autofill:active {
 .icon-animation  {
 	animation: icon-animation 2s infinite ease-out;
 } */
-
-
-
-
+.icon-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
 .footer-logo {
   width: 60px;
