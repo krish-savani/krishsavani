@@ -469,6 +469,7 @@ video::-webkit-media-controls {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 .timeline-content {
     padding-left: 54px;
     padding-top: 20px;
