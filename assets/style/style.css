@@ -759,7 +759,7 @@ input:-webkit-autofill:active {
   position: relative;
 }
 
-/* @keyframes rotation {
+@keyframes rotation {
   from{
     transform:rotate(0deg);
   }
@@ -771,26 +771,8 @@ input:-webkit-autofill:active {
 
 .rotation  {
 	animation: rotation 2s infinite ease-in;
-} */
-
-/* @keyframes icon-animation {
-  0% {
-    transform: scale(.1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(.8);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
-.icon-animation  {
-	animation: icon-animation 2s infinite ease-out;
-} */
 .icon-svg {
   position: absolute;
   top: 50%;
