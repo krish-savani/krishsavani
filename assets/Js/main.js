@@ -37,3 +37,9 @@ $('ul.tabs-ul').each(function(){
 	  return false;
 	});
   });
+
+
+  function disableVideoControls() { 
+	var video = document.getElementById("backround-video");
+	video.removeAttribute("controls"); 
+ };
