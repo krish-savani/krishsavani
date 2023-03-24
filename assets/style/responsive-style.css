@@ -57,6 +57,12 @@
     }
 }
 
+@media (min-width: 768px){
+	.fs-8 {
+        font-size: 0.8rem;
+      }
+}
+
 @media only screen and (max-width: 426px) {
     .hero {
         min-height: 480px;
@@ -88,9 +94,6 @@
 	.timeline-content {
 	    padding-left: 64px;
 	}
-}
-
-@media (min-width: 992px) {
     .info-before:before {
         content: "";
         position: absolute;

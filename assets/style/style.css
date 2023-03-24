@@ -102,6 +102,8 @@
   width: 60px;
 }
 
+
+
 /* header css */
 
 .header {
@@ -341,6 +343,10 @@ button:focus:not(:focus-visible) {
 
 video::-webkit-media-controls {
     display:none !important;
+}
+
+video::-webkit-media-controls {
+  display: none;
 }
 
 .iam{

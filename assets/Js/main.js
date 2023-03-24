@@ -1,5 +1,5 @@
 window.onscroll = function () {
-    if (window.pageYOffset > 50) {
+    if (window.pageYOffset > 20) {
         header.classList.add("header-scrolled");
     } else {
         header.classList.remove("header-scrolled");
