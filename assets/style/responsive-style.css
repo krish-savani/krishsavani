@@ -92,6 +92,25 @@
     .tabs-style-flip nav a span {   
         font-size: 8px;
     }
+    .personal-info h2 {
+        font-size: 20px;
+    }
+    .timeline-content h3{
+        font-size: 18px;
+    }
+    .timeline-content h4{
+        font-size: 15px;
+    }
+    .timeline-content p, .timeline-content ul{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .timeline-content ul{
+        font-size: 13px;
+    }
+    .timeline-content span{
+        font-size: 11px;
+    }
     #wid .icon-svg {
         position: relative;
     }
