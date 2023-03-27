@@ -492,8 +492,20 @@ video::-webkit-media-controls {
     border-radius: 32px;
     transition: all ease-in-out 0.5s;
 }
-.timeline-content:hover::after {
-    height: 83%;
+
+.personal-info .timeline-content:hover::after {
+  height: calc(100% - 7%);
+}
+
+.additional-info .timeline-content:hover::after {
+    height: calc(100% - 8%);
+}
+.education .timeline-content:hover::after{
+  height: calc(100% - 10%);
+}
+
+.job-exp .timeline-content:hover::after {
+  height: calc(100% - 5%);
 }
 .timeline-content .outer-shadow {
     border-radius: 10px;

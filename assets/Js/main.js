@@ -19,7 +19,6 @@ var typing=new Typed(".type-text", {
     loop: true,
 });
 
-
 $('ul.tabs-ul').each(function(){
 	var active, content, links = $(this).find('a');
 	active = links.first().addClass('tab-current');
