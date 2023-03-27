@@ -294,10 +294,6 @@ video::-webkit-media-controls-panel {
   width: 300px;
 }
 
-.text-start {
-  margin: 0 0 30px 0;
-}
-
 .name-text {
   font-size: 100px;
   white-space: nowrap;
@@ -360,7 +356,7 @@ video::-webkit-media-controls {
   padding: 0 6px 0 10px;
   font-family: sans-serif;
 }
-.type-text{
+.hero .type-text{
   color: var(--bs-primary);
   border-right: 2px solid var(--bs-primary);
   padding-right: 4px;
