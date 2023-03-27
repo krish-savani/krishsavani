@@ -505,6 +505,7 @@ video::-webkit-media-controls {
 .job-exp .timeline-content:hover::after {
   height: calc(100% - 5%);
 }
+
 .timeline-content span{
   font-size: 16px;
 }
