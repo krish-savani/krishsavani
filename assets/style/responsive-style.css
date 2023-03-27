@@ -34,7 +34,7 @@
     .iam{
         font-size: 35px;
     }
-    .text{
+    .hero .type-text{
         font-size: 35px;
     }
     #skills .title {
@@ -55,6 +55,8 @@
     .iam{
         padding: 0 6px 0 6px;
     }
+    
+
 }
 
 @media (min-width: 768px){
