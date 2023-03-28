@@ -43,6 +43,7 @@ function disableVideoControls() {
 	video.removeAttribute("controls"); 
 };
 
+
  $("#portfolio_flters > li").click(function () {
 	$("#portfolio_flters > li").removeClass("filter-active");
 	$(this).addClass("filter-active");
@@ -55,6 +56,5 @@ $("#portfolio_flters > li").click(function () {
 		$(".portfolio-item").css("display", "block");
 	} else {
 		$(".portfolio-item." + value).css("display", "block");
-		$(".portfolio-container").css('justify-content', 'center');
 	}
 });
