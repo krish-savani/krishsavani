@@ -38,7 +38,23 @@ $('ul.tabs-ul').each(function(){
   });
 
 
-  function disableVideoControls() { 
+function disableVideoControls() { 
 	var video = document.getElementById("backround-video");
 	video.removeAttribute("controls"); 
- };
+};
+
+ $("#portfolio_flters > li").click(function () {
+	$("#portfolio_flters > li").removeClass("filter-active");
+	$(this).addClass("filter-active");
+});
+
+$("#portfolio_flters > li").click(function () {
+	var value = $(this).attr("data-filter");
+	$(".portfolio-item").css("display", "none");
+	if (value == "all") {
+		$(".portfolio-item").css("display", "block");
+	} else {
+		$(".portfolio-item." + value).css("display", "block");
+		$(".portfolio-container").css('justify-content', 'center');
+	}
+});
