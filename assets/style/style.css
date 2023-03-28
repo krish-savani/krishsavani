@@ -806,7 +806,7 @@ footer{
 #portfolio #portfolio_flters {
     background-color: transparent !important;
     list-style: none;
-    padding: 2px 15px;
+    transition: all 0s;
 }
 
 #portfolio #portfolio_flters li {
