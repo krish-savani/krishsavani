@@ -53,24 +53,24 @@ $showError = false;
       <div class="text-center">
         <h2 class="text-white mb-3">Login</h2>
       </div>
-      <form class="login-form" method="post" action="">
+      <form class="login-form admin-form" method="post" action="">
         <div class="row justify-content-center">
           <div class="col-4">
             <div class="row">
               <div class="col-sm-12 shadow-hover border-radius-30">
                 <div class="outer-shadow border-radius-30 mb-3">
-                    <input class="inner-shadow form-control h-100 " placeholder="Username" value="" id="username" name="username" type="text">
+                    <input class="inner-shadow form-control w-100 h-100 px-3 py-2" placeholder="Username" value="" id="username" name="username" type="text">
                 </div>
               </div>
               <div class="col-sm-12 shadow-hover border-radius-30">
                 <div class="outer-shadow border-radius-30 mb-3">
-                    <input class="inner-shadow form-control h-100 " placeholder="Password" value="" id="password" name="password" type="password">
+                    <input class="inner-shadow form-control w-100 h-100 px-3 py-2" placeholder="Password" value="" id="password" name="password" type="password">
                 </div>
               </div>
               <div class="col-12 text-center">
                 <div class="shadow-hover border-radius-30 d-inline-block">
                     <div class="outer-shadow border-radius-30  text-center">
-                        <input type="submit" name="submit" value="Login" class="form-control send inner-shadow border-radius-30 d-block py-2 px-4 font-size-15 text-primary fw-bold">
+                        <input type="submit" name="submit" value="Login" class="send inner-shadow border-radius-30 d-block py-2 px-4 font-size-15 text-primary fw-bold">
                     </div>
                 </div>
               </div>
