@@ -31,10 +31,38 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive-style.css">
 </head>
+
 <body class="font-lato">
-    <?php 
-        include("partials/_header.php");
-    ?>
+    <header id="header" class="header position-fixed d-flex w-100 text-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+                <h1 class="h1 m-0 py-2 position-relative"><a href="#index.html" class="text-white text-decoration-none font-caudex">Krish
+                        Savani</a></h1>
+                <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="nav-icon1" class="position-relative m-0"><span class="d-block position-absolute w-100"></span><span class="d-block position-absolute w-100"></span><span class="d-block position-absolute w-100"></span></div>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end navbar-div" id="navbarSupportedContent">
+                    <ul class="navbar m-0 justify-content-evenly px-0 py-2 list-unstyled">
+                        <li class="list-item d-inline-block position-relative border-0">
+                            <a href="index.html" class="position-relative text-white text-decoration-none"><span class="d-block py-2 px-3">Home</span></a>
+                        </li>
+                        <li class="list-item d-inline-block position-relative border-0">
+                            <a href="#resume" class="position-relative text-white text-decoration-none"><span class="d-block py-2 px-3">Resume</span></a>
+                        </li>
+                        <li class="list-item d-inline-block position-relative border-0">
+                            <a href="#portfolio" class="position-relative text-white text-decoration-none"><span class="d-block py-2 px-3">Portfolio</span></a>
+                        </li>
+                        <li class="list-item d-inline-block position-relative border-0">
+                            <a href="" class="position-relative text-white text-decoration-none"><span class="d-block py-2 px-3">Blog</span></a>
+                        </li>
+                        <li class="list-item d-inline-block position-relative border-0">
+                            <a href="#contact" class="position-relative text-white text-decoration-none"><span class="d-block py-2 px-3">Contact</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main>
         <div class="hero position-relative vh-100">
             <video id="backround-video" class="w-100 h-100" onplaying="disableVideoControls();" role="presentation"
@@ -58,13 +86,12 @@
         </div>
         <section id="wid">
             <div class="container">
-                <div class="row justify-content-between my-0 mx-auto">
-                    <div class="row text-center pt-lg-5 pt-4">
-                        <div class="col-lg-12">
-                            <h2 class="text-white py-4 m-0">What I'm Doing</h2>
-                        </div>
+                <div class="row justify-content-between my-0 mx-auto pb-lg-5 pb-4">
+                    <div class="col-lg-12 text-center">
+                        <p></p>
+                        <h2 class="text-white py-4 m-0">What I'm Doing</h2>
                     </div>
-                    <div class="box-shadow">
+                    <section id="" class="box-shadow">
                         <div class="row p-3 p-sm-4">
 							<div class="col-12 col-lg-6 shadow-hover my-4">
                                 <div class="outer-shadow border-radius-10">                     
@@ -128,18 +155,19 @@
                                 </div>
 							</div>
 						</div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>
         <section id="resume">
             <div class="container">
-                <div class="row text-center pt-lg-5 pt-4">
+                <div class="text-center row">
                     <div class="col-lg-12">
+                        
                         <h2 class="text-white py-4 m-0">My Resume</h2>
                     </div>
                 </div>
-                <div class="tabs position-relative overflow-hidden my-0 mx-auto tabs-style-flip">
+                <div class="tabs position-relative overflow-hidden my-0 mx-auto tabs-style-flip pb-lg-5 pb-4">
                     <nav>
                         <ul class="tabs-ul position-relative d-flex list-unstyled justify-content-center my-0 mx-auto p-0">
                             <li class="position-relative d-block m-0 text-center"><a href="#about-me" class="position-relative d-block overflow-hidden text-decoration-none py-1 py-sm-2 py-md-3 tab-current"><span class="text-uppercase fw-bold">ABOUT ME</span></a></li>
@@ -441,7 +469,7 @@
                             </div>
                         </section>
                         <section id="education" class="box-shadow w-100 p-3 p-sm-4" style="display: none;">
-                            <div class="row pt-lg-5 pt-4">
+                            <div class="row">
                                 <div class="col-lg-6 col-12 pb-5">
                                     <div class="content text-white">
                                         <div class="timeline education">
@@ -519,7 +547,7 @@
         </section>
         <section id="portfolio" class="portfolio">
             <div class="container" data-aos="fade-up">
-                <div class="row text-center pt-lg-5 pt-4">
+                <div class="text-center row">
                     <div class="col-lg-12">
                         <h2 class="text-white py-4 m-0">Portfolio</h2>
                     </div>
@@ -527,7 +555,7 @@
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio_flters" class="mt-0 mx-auto mb-4 bg-white text-center py-1 px-0">
-                            <li data-filter="filter-all" id="all" class="shadow-hover filter-active d-inline-flex fs-6 text_grey rounded-pill m-0 p-0">
+                            <li data-filter="all" id="all" class="shadow-hover filter-active d-inline-flex fs-6 text_grey rounded-pill m-0 p-0">
                                 <div class="outer-shadow rounded-pill">
                                     <div class="inner-shadow rounded-pill py-2 px-4">All</div>
                                 </div>
@@ -546,9 +574,9 @@
                     </div>
                 </div>
         
-                <div class="row gy-4 pb-lg-5 pb-4 justify-content-center portfolio-container h-100 position-relative" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
+                <div class="row gy-4 portfolio-container h-100 position-relative justify-content-center pb-4 pb-lg-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6  portfolio-item filter-app">
+                        <div class="portfolio_wrap position-relative overflow-hidden">
                             <img src="assets/image/portfolio-1.jpg" class="img-fluid" alt="">
                             <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
                                 <h4 class="fs-5 fw-bold text_dark_blue">App 1</h4>
@@ -560,7 +588,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  portfolio-item filter-web">
-                        <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
+                        <div class="portfolio_wrap position-relative overflow-hidden">
                             <img src="assets/image/portfolio-2.jpg" class="img-fluid" alt="">
                             <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
                                 <h4 class="fs-5 fw-bold text_dark_blue">Web 1</h4>
@@ -571,8 +599,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
+                    <div class="col-lg-4 col-md-6  portfolio-item filter-app">
+                        <div class="portfolio_wrap position-relative overflow-hidden">
                             <img src="assets/image/portfolio-3.jpg" class="img-fluid" alt="">
                             <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
                                 <h4 class="fs-5 fw-bold text_dark_blue">App 2</h4>
@@ -585,80 +613,16 @@
                     </div>
                 </div>
 
-                <div class="row text-center">
+                <div class="text-center row">
                     <div class="col-lg-12">
-                        <a href="portfolio.php" class="text-white text-decoration-none pt-4 m-0">View All</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="blog" class="blog">
-            <div class="container" data-aos="fade-up">
-                <div class="row text-center pt-lg-5 pt-4">
-                    <div class="col-lg-12">
-                        <h2 class="text-white py-4 m-0">Blog</h2>
-                    </div>
-                </div>
-                <div class="row gy-4 pb-lg-5 pb-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="shadow-hover h-100">
-                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
-                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
-                                    <div class="post_img overflow-hidden position-relative">
-                                        <img src="assets/image/blog-1.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
-                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">The Internet of Things: Building a Smarter, More Connected World</h3>
-                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="shadow-hover h-100">
-                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
-                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
-                                    <div class="post_img overflow-hidden position-relative">
-                                        <img src="assets/image/blog-2.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
-                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">Eum ad dolor et. Autem aut fugiat
-                                        debitis voluptatem consequuntur sit</h3>
-                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="shadow-hover h-100">
-                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
-                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
-                                    <div class="post_img overflow-hidden position-relative">
-                                        <img src="assets/image/blog-3.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
-                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">Eum ad dolor et. Autem aut fugiat
-                                        debitis voluptatem consequuntur sit</h3>
-                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <a href="blog.php" class="text-white text-decoration-none m-0">View All</a>
+                        <a href="Portfolio.html" class="text-white text-decoration-none py-4 m-0">View All</a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact">
             <div class="container">
-                <div class="row text-center pt-lg-5 pt-4">
-                    <div class="col-lg-12">
-                        <h2 class="text-white py-4 m-0">Contact</h2>
-                    </div>
-                </div>
+                <h2 class="text-center text-white py-4 m-0">Contact</h2>
                 <div class="row justify-content-between my-0 mx-auto pb-5">
                     <div class="col-lg-4 left">
                         <div class="inside sticky">
@@ -748,7 +712,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="item position-relative">
-                                                <div class="pulsating_circle"></div>
+                                                <div class="pulsating-circle"></div>
                                                 <a class="contact-inner-shadow d-block border-radius-20" href="https://goo.gl/maps/zLV1UoyTCfttgWLo7" target="_blank">
                                                     <div class="p-2">
                                                         <div class="contact-outer-shadow border-radius-20">
@@ -916,8 +880,11 @@
             </div>
         </div>
     </footer>
-    <!--Bootstrap Bundle with Popper -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="assets/Js/main.js"></script>
 </body>
