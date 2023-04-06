@@ -22,4 +22,3 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive-style.css">
-    <link rel="stylesheet" href="assets/style/admin.css">

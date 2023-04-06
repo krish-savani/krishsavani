@@ -3,46 +3,12 @@
   padding: 0;
   
 }
+
 :root {
   --bs-primary: #f56c6d;
   --bs-secondary: #9da1a5;
   --bs-dark: #2C2D30;
 }
-
-#loader {
-  background: #2c2d30;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-}
-
-.loader-inner {
-  left: 0;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
-.loader_circle {
-  position: relative;
-  box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535;
-  width: 50px;
-  height: 50px;
-  margin: 100px auto;
-  border-radius: 3em;
-}
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -95,12 +61,7 @@
 .border-radius-10 {
   border-radius: 10px;
 }
-.br-top-10  {
-  border-radius: 0px 0px 10px 10px
-}
-.br-bottom-10  {
-  border-radius: 0px 0px 10px 10px
-}
+
 .border-radius-20 {
   border-radius: 20px;
 }
@@ -496,7 +457,7 @@ video::-webkit-media-controls {
     box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
 }
 .inner-shadow, .outer-shadow{
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease 0s;
 }
 .shadow-hover:hover .outer-shadow {
     box-shadow: 0 0 0 #202125, 0 0 0 #353535;
@@ -775,11 +736,7 @@ hr.divider:after {
     box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535 !important;
 }
 
-.contact_eps .shadow-hover {
-    width: 100%;
-}
-
-.pulsating_circle, #loader .loader_circle .loader_inner_circle {
+.pulsating_circle {
   position: absolute;
   left: 37%;
   top: 65%;
@@ -787,20 +744,15 @@ hr.divider:after {
   width: 30px;
   height: 30px;
 }
-
-#loader .loader_circle .loader_inner_circle {
-  left: 50%;
-  top: 50%;
-}
   
-.pulsating_circle:after, #loader .loader_circle .loader_inner_circle:after {
+.pulsating_circle:after {
     content: '';
     position: absolute;
     left: 0; 
     top: 0;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     background-color: var(--bs-primary);
     border-radius: 15px;
     box-shadow: 0 0 8px rgba(0,0,0,.3);
@@ -928,10 +880,6 @@ footer{
     width: 60px;
   }
 
-/* seprate blogs page */
 
-  #blog .left .inside.sticky {
-    position: sticky;
-    top: 80px;
-    bottom: 80px;
-  }
+
+

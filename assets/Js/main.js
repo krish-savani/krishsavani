@@ -1,7 +1,11 @@
 
 $(document).ready(function(){
+
+	console.log("Hello");
+
 	
 	$("#portfolio_flters > li").click(function () {
+		console.log("tets1");
 		$("#portfolio_flters > li").removeClass("filter-active");
 		$(this).addClass("filter-active");
 	});
@@ -65,9 +69,4 @@ $(document).ready(function(){
 		  }, 1000); // set your animation speed here
 	  }
 	});
-	
-	const loader = document.getElementById("loader");
-	setTimeout(function () {
-		loader.style.display = "none";
-	}, 1000);
 });

@@ -1,11 +1,3 @@
-<?php
-    include("partials/_config.php");
-
-    $sql = "SELECT * FROM `info` WHERE `info`.`id` = 1";
-    $info_result = mysqli_query($conn, $sql);
-    $info = mysqli_fetch_assoc($info_result);
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -14,33 +6,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Krish's Portfolio</title>
-    <?php
-        include("partials/_common-link.php");
-    ?>
+    <link rel="icon" class="rounded-circle" type="image/x-icon" href="assets/image/favi-icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- font awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- text-type script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/responsive-style.css">
 </head>
 <body class="font-lato">
     <?php 
         include("partials/_header.php");
     ?>
-    <div id="loader">
-        <div class="loader-inner" style="display: block;">
-            <div class="item position-relative loader_circle">
-                    <div class="loader_inner_circle"></div>
-            </div>
-        </div>
-    </div>
-
     <main>
         <div class="hero position-relative vh-100">
-            <video id="backround-video" class="w-100 h-100" role="presentation"
+            <video id="backround-video" class="w-100 h-100" onplaying="disableVideoControls();" role="presentation"
                 crossorigin="anonymous" playsinline="true" preload="auto" loop="true" muted="true" controls="false" autoplay="true"
                 src="assets/video/background-video.mp4"></video>
             <div class="intro-section position-absolute">
                 <div class="align-center text-white text-center position-relative">
                     <img class="rounded-circle my-image" src="assets/image/logo.jpg" alt="hero-img">
-                    <h2 class="name-text font-caudex"><?=$info['name']; ?></h2>
+                    <h2 class="name-text font-caudex">Krish Savani </h2>
                     <div class="text-start mb-4">
-                        <span class="iam"><?=$info['title']; ?></span>
+                        <span class="iam">I'm</span>
                         <span class="type-text pe-1">Youtube</span><span class="typed-cursor">|</span><span class="typed-cursor">|</span><span class="typed-cursor">|</span><span class="typed-cursor">|</span><span class="typed-cursor">|</span><span class="typed-cursor typed-cursor--blink">|</span>
                     </div>
                     <!-- <a href="#intro"><img class="down-arrow rounded-circle" src="assets/image/down-icon.png" alt=""></a> -->
@@ -59,7 +64,7 @@
                             <h2 class="text-white py-4 m-0">What I'm Doing</h2>
                         </div>
                     </div>
-                    <div class="box-shadow border-radius-10">
+                    <div class="box-shadow">
                         <div class="row p-3 p-sm-4">
 							<div class="col-12 col-lg-6 shadow-hover my-4">
                                 <div class="outer-shadow border-radius-10">                     
@@ -144,7 +149,7 @@
                         </ul>
                     </nav>
                     <div class="content-wrap p-1">
-                        <section id="about-me" class="box-shadow w-100 p-3 p-sm-4 br-bottom-10"> 
+                        <section id="about-me" class="box-shadow w-100 p-3 p-sm-4"> 
                             <div class="row">
                                 <div class="col-lg-6 col-12 pb-5">
                                     <div class="content text-white">
@@ -512,12 +517,6 @@
                 </div>
             </div>
         </section>
-
-        <?php
-            $sql = "SELECT `p_img`, `p_title`, `p_description`, `p_filter` FROM `portfolio`";
-            $portfolio_result = mysqli_query($conn, $sql);
-            // $blog = mysqli_fetch_assoc($blog_result);
-        ?>
         <section id="portfolio" class="portfolio">
             <div class="container" data-aos="fade-up">
                 <div class="row text-center pt-lg-5 pt-4">
@@ -548,7 +547,7 @@
                 </div>
         
                 <div class="row gy-4 pb-lg-5 pb-4 justify-content-center portfolio-container h-100 position-relative" data-aos="fade-up" data-aos-delay="200">
-                    <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
                             <img src="assets/image/portfolio-1.jpg" class="img-fluid" alt="">
                             <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
@@ -571,30 +570,19 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                    
-                    <?php 
-                    if (mysqli_num_rows($portfolio_result) > 0) {
-                        $count = 0;
-                        while ($portfolio = mysqli_fetch_array($portfolio_result)) {
-                            $count++; 
-                            if ($count == 4) {
-                                break;
-                            }
-                            echo '<div class="col-lg-4 col-md-6 portfolio-item '. $portfolio['p_filter'] .'">
-                                    <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
-                                        <img src="assets/image/'. $portfolio['p_img'] .'" class="img-fluid" alt="">
-                                        <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
-                                            <h4 class="fs-5 fw-bold text_dark_blue">' . $portfolio['p_title'] . '</h4>
-                                            <div class="portfolio_links_div text-center">
-                                                <a href="assets/image/'. $portfolio['p_img'] .'" title="More Details" class="portfolio_links text-white bg_blue d-inline-flex align-items-center justify-content-center rounded-circle text-decoration text-decoration-none">View</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>';
-                        }
-                    }
-                    ?>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio_wrap position-relative overflow-hidden border-radius-10">
+                            <img src="assets/image/portfolio-3.jpg" class="img-fluid" alt="">
+                            <div class="portfolio_info text-center d-flex flex-column justify-content-center align-items-center p-3 p-md-0">
+                                <h4 class="fs-5 fw-bold text_dark_blue">App 2</h4>
+                                <p class="fs-6 text-uppercase p-0 m-0 text_dark_blue">App</p>
+                                <div class="portfolio_links_div text-center">
+                                    <a href="portfolio-details.html" title="More Details" class="portfolio_links text-white bg_blue d-inline-flex align-items-center justify-content-center rounded-circle text-decoration text-decoration-none">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row text-center">
@@ -604,13 +592,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- blog section -->
-        <?php
-            $sql = "SELECT `blog_img`, `blog_date`, `blog_title`, `blog_description`, `blog_link` FROM `blog`";
-            $blog_result = mysqli_query($conn, $sql);
-            // $blog = mysqli_fetch_assoc($blog_result);
-        ?>
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
                 <div class="row text-center pt-lg-5 pt-4">
@@ -619,32 +600,50 @@
                     </div>
                 </div>
                 <div class="row gy-4 pb-lg-5 pb-4 justify-content-center">
-                    <?php 
-                    if (mysqli_num_rows($blog_result) > 0) {
-                        $count = 0;
-                        while ($blog = mysqli_fetch_array($blog_result)) {
-                            $count++; 
-                            if ($count == 4) {
-                                break;
-                            }
-                            echo '<div class="col-lg-4 col-md-6">
-                                    <div class="shadow-hover h-100">
-                                        <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
-                                        <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="'. $blog['blog_link'].'">
-                                                <div class="post_img overflow-hidden position-relative">
-                                                    <img src="assets/image/'. $blog['blog_img'] .'" class="img-fluid" alt="">
-                                                </div>
-                                                <span class="post_date fs-6 d-block mb-2">' . $blog['blog_date'] . '</span>
-                                                <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">' . $blog['blog_title'] . '</h3>
-                                                <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
-                                            </a>
-                                        </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="shadow-hover h-100">
+                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
+                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
+                                    <div class="post_img overflow-hidden position-relative">
+                                        <img src="assets/image/blog-1.jpg" class="img-fluid" alt="">
                                     </div>
-                                </div>';
-                            
-                        }
-                    }
-                    ?>
+                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
+                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">The Internet of Things: Building a Smarter, More Connected World</h3>
+                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="shadow-hover h-100">
+                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
+                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
+                                    <div class="post_img overflow-hidden position-relative">
+                                        <img src="assets/image/blog-2.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
+                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">Eum ad dolor et. Autem aut fugiat
+                                        debitis voluptatem consequuntur sit</h3>
+                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="shadow-hover h-100">
+                            <div class="outer-shadow overflow-hidden h-100 position-relative d-flex flex-column border-radius-10">
+                                <a class="post_box inner-shadow p-4 text-decoration-none h-100 d-flex flex-column" href="">
+                                    <div class="post_img overflow-hidden position-relative">
+                                        <img src="assets/image/blog-3.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <span class="post_date fs-6 d-block mb-2">Tue, September 15</span>
+                                    <h3 class="post_title text-white fs-4 fw-bold mb-4 position-relative text_dark_blue">Eum ad dolor et. Autem aut fugiat
+                                        debitis voluptatem consequuntur sit</h3>
+                                    <span class="readmore mt-auto d-flex text-center align-items-center fw-bold">Read More<i class="fa fa-arrow-right fs-6"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div> 
                 <div class="row text-center">
                     <div class="col-lg-12">
@@ -664,7 +663,7 @@
                     <div class="col-lg-4 left">
                         <div class="inside sticky">
                             <div class="row pe-lg-4 pb-4 pb-lg-0">
-                                <div class="col-md-12 box-shadow p-4 pt-lg-4 pt-0 border-radius-10">
+                                <div class="col-md-12 box-shadow p-4 pt-lg-4 pt-0">
                                     <div class="row my-4 mb-lg-5">
                                         <div class="col">
                                             <h6 class="fw-bold text-white mb-0 text-uppercase mb-2">Krish Savani
@@ -735,9 +734,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 right">
                         <div class="inside">
-                            <div class="row box-shadow border-radius-10">
+                            <div class="row box-shadow">
                                 <div class="col-md-12 p-5">
                                     <div class="row mb-lg-5 mb-4 ">
                                         <div class="col">
@@ -779,7 +778,7 @@
                                                 </h2>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1 contact_eps">
+                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1">
                                             <div class="text-center">
                                                 <div class="border-radius-80">
                                                     <div class="contact-inner-shadow position-relative ui-icon ui-icon-lg ">
@@ -788,15 +787,15 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0 mx-auto">
+                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0">
                                                     <div class="outer-shadow border-radius-30">
-                                                            <a href="mailto:savanikrish3.com" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-14">
+                                                            <a href="mailto:savanikrish3.com" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-8">
                                                                 <span class="d-block">Email :</span> savanikrish3@gmail.com </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1 contact_eps">
+                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1">
                                             <div class="text-center">
                                                 <div class="border-radius-80">
                                                     <div class="contact-inner-shadow position-relative ui-icon ui-icon-lg ">
@@ -805,15 +804,15 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0 mx-auto">
+                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0">
                                                     <div class="outer-shadow border-radius-30">
-                                                            <a href="tel:+91 6352996927" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-14">
+                                                            <a href="tel:+91 6352996927" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-8">
                                                                 <span class="d-block">Phone :</span>+91 6352996927 </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1 contact_eps">
+                                        <div class="col-md-4 mb-3 mb-lg-0 z-index-1">
                                             <div class="text-center">
                                                 <div class="border-radius-80">
                                                     <div class="contact-inner-shadow position-relative ui-icon ui-icon-lg ">
@@ -822,9 +821,9 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0 mx-auto">
+                                                <div class="shadow-hover border-radius-30 mt-3 mb-0 p-0">
                                                     <div class="outer-shadow border-radius-30">
-                                                            <a href="index.html" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-14">
+                                                            <a href="index.html" class="text-secondary border-radius-30 inner-shadow text-decoration-none d-block m-0 px-3 pt-1 pb-2 fs-8">
                                                                 <span class="d-block">Site :</span> krishsavani.com </a>
                                                     </div>
                                                 </div>
@@ -850,7 +849,7 @@
                                                 <div class="col-sm-6 shadow-hover border-radius-30">
                                                     <div class="outer-shadow border-radius-30 mb-3">
                                                         <input class="inner-shadow form-control h-100 " placeholder="Email" value="" id="email" name="email" type="email">
-                                                    </div>
+                                                                                        </div>
                                                 </div>
                                                 <div class="col-sm-6 shadow-hover border-radius-30">
                                                     <div class="outer-shadow border-radius-30 mb-3">

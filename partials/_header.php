@@ -1,15 +1,8 @@
-<?php 
-    include("partials/_config.php");
-
-    $sql = "SELECT * FROM `info` WHERE `info`.`id` = 1";
-    $info_result = mysqli_query($conn, $sql);
-    $info = mysqli_fetch_assoc($info_result);
-?>
-
 <header id="header" class="header position-fixed d-flex w-100 text-white">
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
-            <h1 class="h1 m-0 py-2 position-relative"><a href="index.php" class="text-white text-decoration-none font-caudex"><?=$info['name']; ?></a></h1>
+            <h1 class="h1 m-0 py-2 position-relative"><a href="index.php" class="text-white text-decoration-none font-caudex">Krish
+                    Savani</a></h1>
             <button class="navbar-toggler py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div id="nav-icon1" class="position-relative m-0"><span class="d-block position-absolute w-100"></span><span class="d-block position-absolute w-100"></span><span class="d-block position-absolute w-100"></span></div>
             </button>
