@@ -46,7 +46,7 @@
                 </div>
             </div>
     
-            <div class="row gy-4 pb-lg-5 pb-4 justify-content-center portfolio-container h-100 position-relative" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4 pb-lg-5 pb-4 justify-content-center portfolio-container position-relative" data-aos="fade-up" data-aos-delay="200">
                 <?php 
                     if (mysqli_num_rows($portfolio_result) > 0) {
                         while ($portfolio = mysqli_fetch_array($portfolio_result)) {
