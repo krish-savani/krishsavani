@@ -151,19 +151,20 @@
 }
 
 h1::before {
-  display: none;
   position: absolute;
   content: '';
-  width: 54%;
+  width: 0%;
   height: 20%;
   background: #F56C6D;
   right: 0;
   bottom: 20%;
   z-index: -1;
+  transition: width 0.3s;
 }
 
 .header-scrolled h1::before {
   display: block;
+  width: 54%;
 }
 
 .header-scrolled {
