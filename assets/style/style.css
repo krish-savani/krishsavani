@@ -256,6 +256,10 @@ video::-webkit-media-controls-panel {
   opacity: 1 !important;
 }
 
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 .list-item{
   font-size: 22px;
   cursor: pointer;
@@ -383,14 +387,6 @@ video::-webkit-media-controls-panel {
   60% {
     transform: translateY(-5px);
   }
-}
-
-video::-webkit-media-controls {
-    display:none !important;
-}
-
-video::-webkit-media-controls {
-  display: none;
 }
 
 .iam{
