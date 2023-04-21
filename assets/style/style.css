@@ -242,7 +242,7 @@ button:focus:not(:focus-visible) {
 
 /* hero section css */
 .hero {
-  min-height: 768px;
+  min-height: 745px;
 }
 
 #background-video {
