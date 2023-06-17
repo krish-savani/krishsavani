@@ -344,8 +344,8 @@ video::-webkit-media-controls {
 }
 
 .down-arrow {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   background: rgba(0,0,0,0.09);
   transition: all 0.3s;
@@ -353,14 +353,14 @@ video::-webkit-media-controls {
   display: flex;
   align-items: center;
   justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .down-arrow i{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .down-arrow:hover {
@@ -467,11 +467,6 @@ video::-webkit-media-controls {
   box-shadow: inset 0 2px 4px 0 #202125, inset 0 0 0 #353535;
   border-radius: 20px 20px 0 0;
 }
-.content-wrap section {
-    margin: 0 auto;
-    padding: 26px;
-}
-
 /* tabs row end */
 
 #about-me {
@@ -872,10 +867,6 @@ svg.svg-icon {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control:focus {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0);
-}
-
 .get-in-touch-content input{
   caret-color: white;
 }
@@ -889,7 +880,8 @@ input:-webkit-autofill:active {
   transition: background-color 5000000s ease-in-out 0s;
 }
 
-.get-in-touch-content input:focus {
+.get-in-touch-content input:focus,
+.get-in-touch-content textarea:focus {
   box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #353535 !important;
 }
 
