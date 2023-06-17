@@ -52,15 +52,11 @@
         font-size: 4rem;
         margin: 24px 0 0 0;
     }
+    .my-image {
+        width: 250px;
+    }
     .iam{
         padding: 0 6px 0 6px;
-    }
-    .down-arrow {
-        width: 80px;
-        height: 80px;
-    }
-    .down-arrow i{
-        font-size: 20px;
     }
 }
 
@@ -163,11 +159,11 @@
         font-size: 26px;
     }
     .down-arrow {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     .down-arrow i{
-        font-size: 20px;
+        font-size: 16px;
     }
     .tabs-style-flip nav a span {   
         font-size: 8px;
