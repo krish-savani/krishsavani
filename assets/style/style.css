@@ -923,8 +923,11 @@ footer{
 
 /* seprate blogs page */
 
-  #blog .left .inside.sticky {
-    position: sticky;
-    top: 80px;
-    bottom: 80px;
-  }
+#blog .left .inside.sticky {
+	position: sticky;
+	top: 80px;
+	bottom: 80px;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #9da1a5 !important;
+}
