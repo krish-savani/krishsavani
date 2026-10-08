@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 
 	var typing=new Typed(".type-text", {
-		strings: ["", "Youtuber", "Graphics Designer", "Web Designer", "Web Developer"],
+		strings: ["", "Graphics Designer", "Web Designer", "Web Developer"],
 		typeSpeed: 100,
 		backSpeed: 40,
 		loop: true,
